@@ -6,8 +6,7 @@ import pyttsx3
 import time 
 
 # Initialize OpenAI API
-openai.api_key = "Your OPENAI KEY API"
-
+openai.api_key = "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"
 # Initialize the text to speech engine 
 engine =pyttsx3.init()
 recognizer = sr.Recognizer()
@@ -41,6 +40,7 @@ def main():
         # wait for the user to say assistant.
 
         print("Say 'assistant' to start recording your question")
+        speak_text("Say 'assistant' to start recording your question")
 
         with sr.Microphone() as source:
             audio = recognizer.listen(source)
@@ -72,9 +72,9 @@ def main():
                             
                         #read resopnse using GPT3
                         speak_text(Response)
-                        
+
             except Exception as e:
-                
+                speak_text("An error ocurred")
                 print("An error ocurred : {}".format(e))
 if __name__=="__main__":
     main()
