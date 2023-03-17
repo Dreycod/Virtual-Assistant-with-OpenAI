@@ -74,7 +74,7 @@ def main():
                         speak_text(Response)
 
             except Exception as e:
-                speak_text("An error ocurred")
+                speak_text("An error ocurred, please restart the program.")
                 print("An error ocurred : {}".format(e))
 if __name__=="__main__":
     main()
